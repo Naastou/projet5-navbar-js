@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aliceblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.navbar {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.btn-toggle {
+  display: none;
+}
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar-link a {
+  text-transform: capitalize;
+  color: grey;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.navbar-icons {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.navbar-icon a {
+  color: rgb(231, 151, 4);
+}
+@media screen and (max-width: 600px) {
+  .nav-center {
+    display: block;
+    padding: 0;
+  }
+  .navbar-links {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+  .open-links {
+    height: 14rem;
+  }
+  .navbar-link a {
+    padding: 1rem;
+    display: block;
+    transition: all 0.3s linear;
+  }
+  .navbar-link a:hover {
+    background-color: rgb(231, 151, 4);
+    padding-left: 1.5rem;
+  }
+  .navbar-icons {
+    display: none;
+  }
+  .btn-toggle {
+    display: block;
+    background: transparent;
+    color: rgb(231, 151, 4);
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .btn-toggle:hover {
+    color: black;
+    transform: rotate(90deg);
+  }
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+}
